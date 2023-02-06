@@ -66,3 +66,8 @@
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
+
+@mixin primary-container {
+  background: var(--bs-primary);
+  color: var(--bs-light);
+}

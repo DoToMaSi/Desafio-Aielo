@@ -1,4 +1,12 @@
+@import "colors";
+
 .main-container {
   display: flex;
   width: 100%;
+
+  #sidebar-menu {
+    @include primary-container;
+    width: 100px;
+    height: 100vh;
+  }
 }
