@@ -1,10 +1,16 @@
 <fieldset>
   <p class="text-bold">{{ label }}</p>
-  <input #input [type]="type" [placeholder]="placeholder" [formControl]="formControl"
+  <input #input [class.invalid]="formControl.invalid && formControl.touched"
+    [type]="type" [placeholder]="placeholder" [formControl]="formControl"
     [max]="max" [min]="min" maxlength="{{ maxlength }}" minlength="{{ minlength }}"
     (blur)="blurEvent.emit($event)" (focus)="focusEvent.emit($event)"
     (change)="changeEvent.emit($event)"/>
-  <small class="text-error" *ngIf="(formControl.invalid && formControl.touched)">
+  <small [@ngIfSlideIn] *ngIf="(formControl.errors?.['required'] && formControl.touched)"
+    class="text-error">
+    O campo {{ label || '' }} é obrigatório!
+  </small>
+  <small [@ngIfSlideIn] *ngIf="(formControl.invalid && formControl.value && formControl.touched)"
+    class="text-error">
     O campo {{ label || '' }} está invalido!
   </small>
 </fieldset>

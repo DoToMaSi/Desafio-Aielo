@@ -10,6 +10,7 @@ form {
     width: 100%;
 
     input {
+      z-index: 10;
       padding: 8px;
       font-size: 14px;
       border: 0px;
@@ -21,11 +22,17 @@ form {
         border: 0px;
         outline: 2px solid var(--bs-primary);
       }
+
+      &.invalid {
+        outline: 2px solid var(--bs-danger);
+      }
     }
 
     .text-error {
+      z-index: 6;
       position: absolute;
-      transform: translate(8px, 68px);
+      margin-top: 68px; // Tried translate(8px, 68px), but animations broke.
+      margin-left: 8px;
       color: var(--bs-danger);
     }
   }

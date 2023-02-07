@@ -1,10 +1,14 @@
 import { Component, EventEmitter, forwardRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ngIfSlideInAnimation } from 'src/app/shared/utils/animations/ngif-slidein.animation';
 
 @Component({
   selector: 'ac-input',
   templateUrl: './ac-input.component.html',
   styleUrls: ['./ac-input.component.scss'],
+  animations: [
+    ngIfSlideInAnimation('200ms', 'top')
+  ],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
