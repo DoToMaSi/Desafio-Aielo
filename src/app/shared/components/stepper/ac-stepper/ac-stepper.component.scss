@@ -35,12 +35,12 @@ $active: var(--bs-primary);
       height: 2px;
       background: var(--bs-gray-300);
 
-      &.next {
-        transform: translate(42px, -18px);
-      }
-
       &.prev {
         transform: translate(-42px, -18px);
+      }
+
+      &.next {
+        transform: translate(42px, -18px);
       }
     }
 
@@ -50,13 +50,31 @@ $active: var(--bs-primary);
 
     &.active {
       .stepper-sphere {
+        background: var(--bs-background);
         border: 2px solid var(--bs-primary);
-        border-radius: 100px;
+      }
+
+      .stepper-line {
+        &.prev {
+          background: var(--bs-primary);
+        }
       }
     }
 
     &.visited {
+      .stepper-sphere {
+        background: var(--bs-primary);
+      }
 
+      .stepper-line {
+        &.prev {
+          background: var(--bs-primary);
+        }
+
+        &.next {
+          background: var(--bs-primary);
+        }
+      }
     }
   }
 }
