@@ -1,7 +1,15 @@
 <section id="busca-cpf-header">
   <h5>Informe o CPF do futuro cooperado (a)</h5>
+  <label class="text-subtle">
+    Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente. Digite apenas os números (sem pontos ou traços).
+  </label>
 </section>
 
-<section>
+<form [formGroup]="handler.formAdmissao">
+  <row>
+    <row-col [sm]="6" [md]="4" [lg]="4" [xl]="2">
+      <ac-input label="CPF" placeholder="000.000.000-00"/>
+    </row-col>
+  </row>
 
-</section>
+</form>

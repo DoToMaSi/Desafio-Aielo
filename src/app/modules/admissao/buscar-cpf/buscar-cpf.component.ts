@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, SkipSelf } from '@angular/core';
+import { AdmissaoHandler } from '../handler/admissao.handler';
 
 @Component({
   selector: 'buscar-cpf',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class BuscarCpfComponent {
+
+  constructor(@SkipSelf() public handler: AdmissaoHandler) { }
 
 }

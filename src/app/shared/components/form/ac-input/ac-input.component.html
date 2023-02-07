@@ -1,1 +1,8 @@
-<p>ac-input works!</p>
+<fieldset>
+  <label>{{ label }}</label>
+  <input #input
+    [type]="type" [placeholder]="placeholder"
+    (blur)="blurEvent.emit($event)"
+    (focus)="focusEvent.emit($event)"
+    (change)="changeEvent.emit($event)"/>
+</fieldset>

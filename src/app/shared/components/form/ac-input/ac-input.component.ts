@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -16,10 +16,19 @@ import { ControlValueAccessor, FormControl, FormGroupDirective, NG_VALUE_ACCESSO
 
 export class AcInputComponent implements OnInit, ControlValueAccessor {
 
+  @ViewChild('input') input: HTMLInputElement;
+
   @Input() label = '';
   @Input() placeholder = '';
+  @Input() type = 'text';
   @Input() formControlName = '';
   @Input() formControl = new FormControl();
+
+  @Output() blurEvent = new EventEmitter();
+  @Output() focusEvent = new EventEmitter();
+  @Output() changeEvent = new EventEmitter();
+  @Output() keyupEvent = new EventEmitter();
+  @Output() keydownEvent = new EventEmitter();
 
   constructor(
     private formGroupDir: FormGroupDirective
