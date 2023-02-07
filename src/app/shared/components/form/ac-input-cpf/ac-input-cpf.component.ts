@@ -2,19 +2,19 @@ import { Component, EventEmitter, forwardRef, Input, OnInit, Output, ViewChild }
 import { ControlValueAccessor, FormControl, FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'ac-input',
-  templateUrl: './ac-input.component.html',
-  styleUrls: ['./ac-input.component.scss'],
+  selector: 'ac-input-cpf',
+  templateUrl: './ac-input-cpf.component.html',
+  styleUrls: ['./ac-input-cpf.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       multi: true,
-      useExisting: forwardRef(() => AcInputComponent),
+      useExisting: forwardRef(() => AcInputCpfComponent),
     },
   ]
 })
 
-export class AcInputComponent implements OnInit, ControlValueAccessor {
+export class AcInputCpfComponent implements OnInit, ControlValueAccessor {
 
   @ViewChild('input') input: HTMLInputElement;
 
@@ -43,12 +43,6 @@ export class AcInputComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {
     if (this.formControlName) {
       this.formControl = this.formGroupDir.control.get(this.formControlName) as FormControl;
-      this.formControl.valueChanges.subscribe({
-        next: (value) => {
-          console.log(value);
-          console.log(this.formControl.errors);
-        }
-      })
     }
   }
 
@@ -56,7 +50,7 @@ export class AcInputComponent implements OnInit, ControlValueAccessor {
     this.input?.focus();
   }
 
-  writeValue() {
+  writeValue(obj: unknown) {
     return;
   }
 
@@ -64,7 +58,7 @@ export class AcInputComponent implements OnInit, ControlValueAccessor {
     return;
   }
 
-  registerOnTouched(): void {
+  registerOnTouched(fn: unknown): void {
     return;
   }
 }

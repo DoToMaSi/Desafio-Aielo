@@ -1,0 +1,7 @@
+<fieldset>
+  <p class="text-bold">{{ label }}</p>
+  <input #input [type]="type" [placeholder]="placeholder" [formControl]="formControl"
+    [max]="max" [min]="min" maxlength="{{ maxlength }}" minlength="{{ minlength }}"
+    (blur)="blurEvent.emit($event)" (focus)="focusEvent.emit($event)" (change)="changeEvent.emit($event)"/>
+</fieldset>
+

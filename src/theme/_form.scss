@@ -22,6 +22,12 @@ form {
         outline: 2px solid var(--bs-primary);
       }
     }
+
+    .text-error {
+      position: absolute;
+      transform: translate(8px, 68px);
+      color: var(--bs-danger);
+    }
   }
 }
 

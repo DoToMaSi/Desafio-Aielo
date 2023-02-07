@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { AcInputComponent } from './ac-input/ac-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AcSelectComponent } from './ac-select/ac-select.component';
+import { AcInputCpfComponent } from './ac-input-cpf/ac-input-cpf.component';
 
 @NgModule({
   declarations: [
     AcInputComponent,
-    AcSelectComponent
+    AcSelectComponent,
+    AcInputCpfComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +17,8 @@ import { AcSelectComponent } from './ac-select/ac-select.component';
   ],
   exports: [
     AcInputComponent,
-    AcSelectComponent
+    AcSelectComponent,
+    AcInputCpfComponent
   ]
 })
 
