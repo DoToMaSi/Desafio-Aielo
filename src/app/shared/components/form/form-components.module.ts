@@ -4,6 +4,7 @@ import { AcInputComponent } from './ac-input/ac-input.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AcSelectComponent } from './ac-select/ac-select.component';
 import { AcInputCpfComponent } from './ac-input-cpf/ac-input-cpf.component';
+import { InputMaskModule } from '@ngneat/input-mask';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AcInputCpfComponent } from './ac-input-cpf/ac-input-cpf.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    InputMaskModule
   ],
   exports: [
     AcInputComponent,

@@ -1,10 +1,15 @@
 import { Component, EventEmitter, forwardRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { createMask } from '@ngneat/input-mask';
+import { ngIfSlideInAnimation } from 'src/app/shared/utils/animations/ngif-slidein.animation';
 
 @Component({
   selector: 'ac-input-cpf',
   templateUrl: './ac-input-cpf.component.html',
   styleUrls: ['./ac-input-cpf.component.scss'],
+  animations: [
+    ngIfSlideInAnimation('200ms', 'top')
+  ],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
@@ -36,6 +41,12 @@ export class AcInputCpfComponent implements OnInit, ControlValueAccessor {
   @Output() keyupEvent = new EventEmitter();
   @Output() keydownEvent = new EventEmitter();
 
+  cpfMask = createMask({
+    placeholder: '_',
+    showMaskOnHover: false,
+    mask: '999.999.999-99'
+  })
+
   constructor(
     private formGroupDir: FormGroupDirective
   ) { }
@@ -50,7 +61,7 @@ export class AcInputCpfComponent implements OnInit, ControlValueAccessor {
     this.input?.focus();
   }
 
-  writeValue(obj: unknown) {
+  writeValue() {
     return;
   }
 
@@ -58,7 +69,7 @@ export class AcInputCpfComponent implements OnInit, ControlValueAccessor {
     return;
   }
 
-  registerOnTouched(fn: unknown): void {
+  registerOnTouched(): void {
     return;
   }
 }

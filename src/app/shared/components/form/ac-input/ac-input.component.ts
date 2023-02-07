@@ -1,5 +1,6 @@
 import { Component, EventEmitter, forwardRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { createMask } from '@ngneat/input-mask';
 import { ngIfSlideInAnimation } from 'src/app/shared/utils/animations/ngif-slidein.animation';
 
 @Component({
@@ -47,12 +48,6 @@ export class AcInputComponent implements OnInit, ControlValueAccessor {
   ngOnInit() {
     if (this.formControlName) {
       this.formControl = this.formGroupDir.control.get(this.formControlName) as FormControl;
-      this.formControl.valueChanges.subscribe({
-        next: (value) => {
-          console.log(value);
-          console.log(this.formControl.errors);
-        }
-      })
     }
   }
 
