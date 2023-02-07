@@ -1,5 +1,29 @@
-fieldset {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+form {
+  .row {
+    align-items: end;
+  }
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+
+    input {
+      padding: 8px;
+      font-size: 14px;
+      border: 0px;
+      outline: 1px solid var(--bs-gray-600);
+      border-radius: 4px;
+      transition: 0.1s all ease-in;
+
+      &:focus-visible, &:focus {
+        border: 0px;
+        outline: 2px solid var(--bs-primary);
+      }
+    }
+  }
 }
+
+
+

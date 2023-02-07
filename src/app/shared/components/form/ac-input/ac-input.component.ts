@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, forwardRef, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormControl, FormGroupDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -21,6 +21,12 @@ export class AcInputComponent implements OnInit, ControlValueAccessor {
   @Input() label = '';
   @Input() placeholder = '';
   @Input() type = 'text';
+
+  @Input() max: number;
+  @Input() maxlength = '';
+  @Input() min: number;
+  @Input() minlength = '';
+
   @Input() formControlName = '';
   @Input() formControl = new FormControl();
 
@@ -40,15 +46,19 @@ export class AcInputComponent implements OnInit, ControlValueAccessor {
     }
   }
 
-  writeValue(obj: unknown) {
-    console.log('writeValue:', obj);
+  focus() {
+    this.input?.focus();
   }
 
-  registerOnChange(fn: unknown): void {
-    console.log('registerOnChange:', fn);
+  writeValue(obj: unknown) {
+    return;
+  }
+
+  registerOnChange(): void {
+    return;
   }
 
   registerOnTouched(fn: unknown): void {
-    console.log('registerOnTouched:', fn);
+    return;
   }
 }

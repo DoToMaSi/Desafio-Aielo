@@ -1,5 +1,12 @@
-#busca-cpf-header {
+#busca-cpf-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 16px;
+
+  #busca-cpf-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
+

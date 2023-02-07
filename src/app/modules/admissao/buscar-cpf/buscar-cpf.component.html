@@ -1,15 +1,22 @@
-<section id="busca-cpf-header">
-  <h5>Informe o CPF do futuro cooperado (a)</h5>
-  <label class="text-subtle">
-    Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente. Digite apenas os números (sem pontos ou traços).
-  </label>
-</section>
+<div id="busca-cpf-container">
+  <section id="busca-cpf-header">
+    <h5>Informe o CPF do futuro cooperado (a)</h5>
+    <label class="text-subtle">
+      Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente. Digite apenas os números (sem pontos ou traços).
+    </label>
+  </section>
 
-<form [formGroup]="handler.formAdmissao">
-  <row>
-    <row-col [sm]="6" [md]="4" [lg]="4" [xl]="2">
-      <ac-input label="CPF" placeholder="000.000.000-00"/>
-    </row-col>
-  </row>
+  <form [formGroup]="handler.formAdmissao">
+    <row>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+        <ac-input label="CPF" placeholder="000.000.000-00" formControlName="documento"/>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+        <button type="button" class="primary">
+          Consultar por CPF
+        </button>
+      </div>
+    </row>
 
-</form>
+  </form>
+</div>
