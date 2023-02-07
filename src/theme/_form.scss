@@ -31,7 +31,7 @@ form {
     .text-error {
       z-index: 6;
       position: absolute;
-      margin-top: 68px; // Tried translate(8px, 68px), but animations broke.
+      margin-top: 68px; // Tried translate(8px, 68px), but animations broke it.
       margin-left: 8px;
       color: var(--bs-danger);
     }

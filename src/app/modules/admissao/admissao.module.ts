@@ -9,6 +9,7 @@ import { FormComponentsModule } from 'src/app/shared/components/form/form-compon
 import { DisplayComponentsModule } from 'src/app/shared/components/display/display-components.module';
 import { StepperModule } from 'src/app/shared/components/stepper/stepper.module';
 import { ValidateBrService } from 'ngx-validate-br';
+import { AdmissaoService } from './service/admissao.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ValidateBrService } from 'ngx-validate-br';
   ],
   providers: [
     AdmissaoHandler,
+    AdmissaoService,
     ValidateBrService
   ]
 })

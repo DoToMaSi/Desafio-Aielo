@@ -11,4 +11,8 @@ export class BuscarCpfComponent {
 
   constructor(@SkipSelf() public handler: AdmissaoHandler) { }
 
+  searchCpf() {
+    // something
+  }
+
 }
