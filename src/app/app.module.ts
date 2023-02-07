@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderModule } from './core/header/header.module';
 import { SidemenuModule } from './core/sidemenu/sidemenu.module';
+import { InputMaskModule } from '@ngneat/input-mask';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SidemenuModule } from './core/sidemenu/sidemenu.module';
     NgbModule,
     FontAwesomeModule,
     HeaderModule,
-    SidemenuModule
+    SidemenuModule,
+    InputMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
