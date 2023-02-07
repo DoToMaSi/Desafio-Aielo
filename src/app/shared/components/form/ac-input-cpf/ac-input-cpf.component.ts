@@ -23,13 +23,10 @@ export class AcInputCpfComponent implements OnInit, ControlValueAccessor {
 
   @ViewChild('input') input: HTMLInputElement;
 
-  @Input() label = '';
-  @Input() placeholder = '';
-  @Input() type = 'text';
+  @Input() label = 'CPF';
+  @Input() placeholder = '000.000.000-00';
 
-  @Input() max: number;
-  @Input() maxlength = '';
-  @Input() min: number;
+  @Input() maxlength = '15';
   @Input() minlength = '';
 
   @Input() formControlName = '';

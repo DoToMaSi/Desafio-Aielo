@@ -9,7 +9,7 @@
   <form [formGroup]="handler.formAdmissao">
     <row>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-        <ac-input label="CPF" placeholder="000.000.000-00" formControlName="documento"/>
+        <ac-input-cpf formControlName="documento"/>
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
         <button type="button" class="primary">
@@ -17,6 +17,5 @@
         </button>
       </div>
     </row>
-
   </form>
 </div>

@@ -2,8 +2,8 @@
   <p class="text-bold">{{ label }}</p>
   <input #input [inputMask]="cpfMask"
     [class.invalid]="formControl.invalid && formControl.touched"
-    [type]="type" [placeholder]="placeholder" [formControl]="formControl"
-    [max]="max" [min]="min" maxlength="{{ maxlength }}" minlength="{{ minlength }}"
+    type="text" [placeholder]="placeholder" [formControl]="formControl"
+    maxlength="{{ maxlength }}" minlength="{{ minlength }}"
     (blur)="blurEvent.emit($event)" (focus)="focusEvent.emit($event)"
     (change)="changeEvent.emit($event)"/>
   <small [@ngIfSlideIn] *ngIf="(formControl.errors?.['required'] && formControl.touched)"
