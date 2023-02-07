@@ -59,6 +59,10 @@ $active: var(--bs-primary);
           background: var(--bs-primary);
         }
       }
+
+      .stepper-title {
+        color: var(--bs-primary);
+      }
     }
 
     &.visited {
@@ -74,6 +78,10 @@ $active: var(--bs-primary);
         &.next {
           background: var(--bs-primary);
         }
+      }
+
+      .stepper-title {
+        color: var(--bs-primary);
       }
     }
   }
