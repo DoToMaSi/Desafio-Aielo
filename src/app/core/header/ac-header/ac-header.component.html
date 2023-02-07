@@ -1,10 +1,14 @@
 <header class="main-header">
   <section class="header-title">
     <h4>{{ (headerService.title | async ) | uppercase }}</h4>
-    <label>{{ headerService.breadcrumbs | async }}</label>
+    <label class="text-subtle">{{ headerService.breadcrumbs | async }}</label>
   </section>
 
   <section class="user-actions">
-    <fa-icon [icon]="['far', 'bell']" size="2x" [fixedWidth]="true" text-primary></fa-icon>
+    <fa-icon [icon]="['far', 'bell']" size="2x" [fixedWidth]="true" class="text-primary"></fa-icon>
+
+    <span class="action-pill">
+      VIACREDI
+    </span>
   </section>
 </header>
