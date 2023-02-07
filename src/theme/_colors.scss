@@ -72,6 +72,11 @@
   color: var(--bs-light);
 }
 
+@mixin primary-outline-container {
+  border: 1px solid var(--bs-primary);
+  color: var(--bs-primary);
+}
+
 .text-primary {
   color: var(--bs-primary);
 }

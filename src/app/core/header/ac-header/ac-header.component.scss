@@ -1,3 +1,5 @@
+@import "colors";
+
 .main-header {
   display: flex;
   align-items: center;
@@ -7,8 +9,25 @@
   background: var(--bs-white);
 
   .user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
     .action-pill {
+      @include primary-outline-container;
+      padding: 5px 16px;
+      border-radius: 15px;
+    }
 
+    .user-image {
+      @include primary-outline-container;
+      background: url('/assets/images/user-image.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50px;
+      height: 42px;
+      width: 42px;
     }
   }
 }
