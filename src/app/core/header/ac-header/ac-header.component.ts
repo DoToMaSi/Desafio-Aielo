@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderService } from '../service/header.service';
 
 @Component({
   selector: 'ac-header',
@@ -8,4 +9,5 @@ import { Component } from '@angular/core';
 
 export class AcHeaderComponent {
 
+  constructor(public headerService: HeaderService) { }
 }

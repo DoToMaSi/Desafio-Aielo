@@ -1,7 +1,12 @@
 .main-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100px;
   padding: 24px;
   background: var(--bs-white);
+
+  .user-actions {
+
+  }
 }

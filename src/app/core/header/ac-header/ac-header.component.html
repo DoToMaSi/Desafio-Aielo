@@ -1,0 +1,10 @@
+<header class="main-header">
+  <section class="header-title">
+    <h4>{{ headerService.title | async }}</h4>
+    <label>{{ headerService.breadcrumbs | async }}</label>
+  </section>
+
+  <section class="user-actions">
+    <fa-icon [icon]="['far', 'bell']" size="2x" [fixedWidth]="true" text-primary></fa-icon>
+  </section>
+</header>

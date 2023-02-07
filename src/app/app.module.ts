@@ -5,7 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DisplayComponentsModuleTsModule } from './shared/components/display/display-components.module.ts.module';
+import { HeaderModule } from './core/header/header.module';
+import { SidemenuModule } from './core/sidemenu/sidemenu.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DisplayComponentsModuleTsModule } from './shared/components/display/dis
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    DisplayComponentsModuleTsModule
+    HeaderModule,
+    SidemenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

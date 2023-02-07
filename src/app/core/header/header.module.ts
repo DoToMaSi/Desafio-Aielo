@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AcHeaderComponent } from './ac-header/ac-header.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AcHeaderComponent
+  ],
   imports: [
     CommonModule,
     FontAwesomeModule
   ],
-  exports: []
+  exports: [
+    AcHeaderComponent
+  ]
 })
 
-export class DisplayComponentsModuleTsModule { }
+export class HeaderModule { }

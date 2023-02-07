@@ -1,0 +1,11 @@
+@import "colors";
+
+.sidebar-menu {
+  @include primary-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100vh;
+  padding: 20px;
+}
