@@ -1,3 +1,11 @@
 .page-content {
-  padding: 25px
+  padding: 25px;
+
+  &-horizontal {
+    padding: 0px 25px;
+  }
+
+  &-vertical {
+    padding: 25px 0px;
+  }
 }

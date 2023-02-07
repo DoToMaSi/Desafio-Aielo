@@ -1,0 +1,23 @@
+<section class="stepper-container">
+  <ng-container *ngFor="let step of (steps | async); let idx = index">
+    <div class="stepper-element" [ngClass]="{
+        'active': currentStepIndex === step.index,
+        'visited': currentStepIndex > step.index
+      }">
+
+      <span class="stepper-line prev" *ngIf="(stepsLength > 0 && idx > 0)">
+      </span>
+
+      <span class="stepper-sphere">
+        &nbsp;
+      </span>
+      <label class="stepper-title">
+        {{ step?.title }}
+      </label>
+
+      <span class="stepper-line next" *ngIf="(stepsLength > 0 && (idx + 1 < stepsLength))">
+      </span>
+    </div>
+  </ng-container>
+</section>
+

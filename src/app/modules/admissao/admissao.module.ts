@@ -8,6 +8,7 @@ import { AdmissaoHandler } from './handler/admissao.handler';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponentsModule } from 'src/app/shared/components/form/form-components.module';
 import { DisplayComponentsModule } from 'src/app/shared/components/display/display-components.module';
+import { StepperModule } from 'src/app/shared/components/stepper/stepper.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { DisplayComponentsModule } from 'src/app/shared/components/display/displ
     ReactiveFormsModule,
     DisplayComponentsModule,
     FormComponentsModule,
+    StepperModule,
     AdmissaoRoutingModule
   ],
   providers: [
