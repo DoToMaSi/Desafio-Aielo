@@ -1,6 +1,6 @@
 <header class="main-header">
   <section class="header-title">
-    <h4>{{ headerService.title | async }}</h4>
+    <h4>{{ (headerService.title | async ) | uppercase }}</h4>
     <label>{{ headerService.breadcrumbs | async }}</label>
   </section>
 
