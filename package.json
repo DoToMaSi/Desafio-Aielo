@@ -28,7 +28,7 @@
     "@ngneat/input-mask": "^6.1.0",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
-    "inputmask": "5.0.5",
+    "inputmask": "5.0.7",
     "ngx-validate-br": "^0.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
