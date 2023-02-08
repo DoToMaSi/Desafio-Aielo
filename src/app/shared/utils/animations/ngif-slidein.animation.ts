@@ -8,8 +8,8 @@ export const ngIfSlideInAnimation = (transitionTime = '100ms', direction: 'left'
   switch (direction) {
     case 'left':
     default:
-      visible = style({ opacity: 1, transform: `translateX(0%)`, visibility: 'visible' });
-      hidden = style({ opacity: 0, transform: `translateX(-100%)`, visibility: 'hidden' });
+      visible = style({ opacity: 1, transform: `translateX(0%)`, width: '*', visibility: 'visible' });
+      hidden = style({ opacity: 0, transform: `translateX(-100%)`, width: '0px', visibility: 'hidden' });
       break;
 
     case 'right':

@@ -10,18 +10,24 @@ import { DisplayComponentsModule } from 'src/app/shared/components/display/displ
 import { StepperModule } from 'src/app/shared/components/stepper/stepper.module';
 import { ValidateBrService } from 'ngx-validate-br';
 import { AdmissaoService } from './service/admissao.service';
+import { NgxLoadingModule } from 'ngx-loading';
+import { AdmissaoCardInfoComponent } from './components/admissao-card-info/admissao-card-info.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AdmissaoComponent,
-    BuscarCpfComponent
+    BuscarCpfComponent,
+    AdmissaoCardInfoComponent
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     DisplayComponentsModule,
     FormComponentsModule,
+    FontAwesomeModule,
     StepperModule,
+    NgxLoadingModule,
     AdmissaoRoutingModule
   ],
   providers: [

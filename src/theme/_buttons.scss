@@ -15,7 +15,9 @@ button {
   }
 
   &.primary {
-    @include primary-container;
+    &:not(.outline) {
+      @include primary-container;
+    }
 
     border: 0px;
     display: flex;
@@ -25,8 +27,26 @@ button {
     font-weight: $semibold-weight;
     transition: 0.1s all ease-in;
 
-    &:hover  {
-      background-color: var(--bs-blue-140);
+    &.large {
+      font-size: 16px;
+      padding: 13px 25px;
+    }
+
+    &.outline {
+      @include primary-outline-container;
+      background: transparent;
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        background-color: var(--bs-blue-140);
+        color: var(--bs-white);
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
     }
   }
 }

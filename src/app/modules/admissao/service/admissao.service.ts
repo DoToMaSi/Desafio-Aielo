@@ -6,7 +6,7 @@ import { Admissao } from '../models/admissao.model';
 
 export class AdmissaoService {
 
-  private admissaoUrl = 'https://63e295e5109336b6cb0b0992.mockapi.io/admissao'
+  private admissaoUrl = 'https://63e295e5109336b6cb0b0992.mockapi.io/onboarding'
 
   constructor(private httpClient: HttpClient) { }
 

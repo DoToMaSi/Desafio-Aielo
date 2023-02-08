@@ -1,4 +1,17 @@
-<div id="admissao-content" class="page-content-horizontal">
-  <ac-stepper></ac-stepper>
-  <buscar-cpf></buscar-cpf>
+<div id="admissao-content">
+  <div id="buscar-cpf" class="page-content-horizontal">
+    <ac-stepper></ac-stepper>
+    <buscar-cpf></buscar-cpf>
+  </div>
 </div>
+
+<footer class="page-footer">
+  <button [@ngIfSlideIn] *ngIf="admissoes.length > 0" class="primary large">
+    <p>Iniciar nova admissão</p>
+  </button>
+
+  <button class="primary outline large">
+    <p>Dicas para abertura da conta</p>
+  </button>
+</footer>
+
