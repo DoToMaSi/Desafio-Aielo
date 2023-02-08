@@ -22,7 +22,15 @@ export class AdmissaoHandler {
     private validateBrService: ValidateBrService,
     private admissaoService: AdmissaoService,
     private toastrService: ToastrService
-  ) { }
+  ) {
+    this.formAdmissao.get('documento').valueChanges.subscribe({
+      next: () => {
+        if (this.admissoes.value.length > 0) {
+          this.admissoes.next([]);
+        }
+      }
+    })
+  }
 
   get loading() {
     return this._loading;

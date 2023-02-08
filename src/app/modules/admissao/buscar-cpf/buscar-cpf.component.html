@@ -46,11 +46,41 @@
       </admissao-card-info>
 
       <admissao-card-info>
+        <div>
+          <p class="text-bold">Conta Aplicação</p>
+          <small class="text-subtle">Cooperativa Viacredi</small>
+        </div>
 
+        <div class="icon-prefix">
+          <fa-icon [icon]="['fas', 'credit-card']" size="2x" [fixedWidth]="true" class="text-gray"></fa-icon>
+          <div class="text-content">
+            <small class="text-subtle">Número da conta</small>
+            <p>{{ admissoes[0].streetNumber }}</p>
+          </div>
+        </div>
+
+        <button class="clear">
+          <p class="text-primary text-bold">Duplicar conta</p>
+        </button>
       </admissao-card-info>
 
       <admissao-card-info>
+        <div>
+          <p class="text-bold">Conta Corrente</p>
+          <small class="text-subtle">Cooperativa Viacredi</small>
+        </div>
 
+        <div class="icon-prefix">
+          <fa-icon [icon]="['fas', 'credit-card']" size="2x" [fixedWidth]="true" class="text-gray"></fa-icon>
+          <div class="text-content">
+            <small class="text-subtle">Número da conta</small>
+            <p>{{ admissoes[0].accountNumber }}</p>
+          </div>
+        </div>
+
+        <button class="clear">
+          <p class="text-primary text-bold">Duplicar conta</p>
+        </button>
       </admissao-card-info>
     </section>
   </form>
