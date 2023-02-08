@@ -1,4 +1,12 @@
 #admissao-content {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  height: calc(100vh - 178px);
+
+  #buscar-cpf {
+    flex-grow: 1;
+    overflow: auto;
+    max-height: calc(100vh - 178px);
+  }
 }

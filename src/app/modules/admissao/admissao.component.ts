@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 import { StepperService } from 'src/app/shared/components/stepper/service/stepper.service';
+import { ngIfSlideInAnimation } from 'src/app/shared/utils/animations/ngif-slidein.animation';
 import { AdmissaoHandler } from './handler/admissao.handler';
 import { AdmissaoService } from './service/admissao.service';
 
 @Component({
   selector: 'admissao',
   templateUrl: './admissao.component.html',
-  styleUrls: ['./admissao.component.scss']
+  styleUrls: ['./admissao.component.scss'],
+  animations: [
+    ngIfSlideInAnimation('200ms')
+  ]
 })
 
 export class AdmissaoComponent {
@@ -36,6 +40,10 @@ export class AdmissaoComponent {
     ]);
 
     this.stepperService.currentIndex.next(0);
+  }
+
+  get admissoes() {
+    return this.handler.admissoes.value;
   }
 
 }
