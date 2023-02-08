@@ -18,6 +18,18 @@
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
+
+      .icon-prefix {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+
+        & > .text-content {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     }
   }
 }

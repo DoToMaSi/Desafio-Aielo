@@ -14,16 +14,44 @@
         <ac-input-cpf formControlName="documento"/>
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-        <button type="button" class="primary" (click)="searchCpf()">
+        <button type="button" class="primary" (click)="searchCpf()"
+          [disabled]="admissoes.length > 0">
           Consultar por CPF
         </button>
       </div>
     </row>
 
-    <section id="admissao-dados" *ngIf="(handler.admissoes | async)!.length > 0">
-      <div *ngFor="let admissao of (handler.admissoes | async)">
-        Data
-      </div>
+    <section id="admissao-dados" *ngIf="admissoes.length > 0">
+      <admissao-card-info>
+        <div>
+          <p class="text-bold">Situação cadastral do CPF</p>
+          <small class="text-subtle">Consulta na Receita Federal</small>
+        </div>
+
+        <div class="icon-prefix">
+          <fa-icon [icon]="['fas', 'user']" size="2x" [fixedWidth]="true" class="text-gray"></fa-icon>
+          <div class="text-content">
+            <small class="text-subtle">Nome</small>
+            <p>{{ admissoes[0].name }}</p>
+          </div>
+        </div>
+
+        <div class="icon-prefix">
+          <fa-icon [icon]="['far', 'circle-check']" size="2x" [fixedWidth]="true"  class="text-success"></fa-icon>
+          <div class="text-content">
+            <small class="text-subtle">Situação do CPF</small>
+            <p>Regular</p>
+          </div>
+        </div>
+      </admissao-card-info>
+
+      <admissao-card-info>
+
+      </admissao-card-info>
+
+      <admissao-card-info>
+
+      </admissao-card-info>
     </section>
   </form>
 </div>

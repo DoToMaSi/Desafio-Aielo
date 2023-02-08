@@ -12,6 +12,7 @@ import { ValidateBrService } from 'ngx-validate-br';
 import { AdmissaoService } from './service/admissao.service';
 import { NgxLoadingModule } from 'ngx-loading';
 import { AdmissaoCardInfoComponent } from './components/admissao-card-info/admissao-card-info.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AdmissaoCardInfoComponent } from './components/admissao-card-info/admis
     ReactiveFormsModule,
     DisplayComponentsModule,
     FormComponentsModule,
+    FontAwesomeModule,
     StepperModule,
     NgxLoadingModule,
     AdmissaoRoutingModule
