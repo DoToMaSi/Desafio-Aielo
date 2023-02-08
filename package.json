@@ -1,6 +1,7 @@
 {
   "name": "desafio-aielo",
   "version": "1.0.0",
+  "author": "Douglas Tomacheski de Abreu e Silva",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
