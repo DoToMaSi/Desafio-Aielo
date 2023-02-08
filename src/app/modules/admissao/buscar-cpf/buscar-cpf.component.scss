@@ -8,5 +8,17 @@
     flex-direction: column;
     gap: 5px;
   }
+
+  #busca-cpf-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    #admissao-dados {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+  }
 }
 

@@ -1,3 +1,5 @@
+<ngx-loading [show]="(loading)"></ngx-loading>
+
 <div id="busca-cpf-container">
   <section id="busca-cpf-header">
     <h5>Informe o CPF do futuro cooperado (a)</h5>
@@ -6,7 +8,7 @@
     </label>
   </section>
 
-  <form [formGroup]="handler.formAdmissao">
+  <form [formGroup]="handler.formAdmissao" id="busca-cpf-content">
     <row>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
         <ac-input-cpf formControlName="documento"/>
@@ -17,7 +19,11 @@
         </button>
       </div>
     </row>
+
+    <section id="admissao-dados" *ngIf="(handler.admissoes | async)!.length > 0">
+      <div *ngFor="let admissao of (handler.admissoes | async)">
+        Data
+      </div>
+    </section>
   </form>
-
-
 </div>

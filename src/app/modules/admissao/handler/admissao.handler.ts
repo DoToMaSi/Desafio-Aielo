@@ -2,8 +2,12 @@ import { Injectable } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ValidateBrService } from 'ngx-validate-br';
 import { BehaviorSubject, lastValueFrom } from "rxjs";
+
 import { Admissao } from "../models/admissao.model";
 import { AdmissaoService } from "../service/admissao.service";
+
+import { ToastrService } from 'ngx-toastr';
+import { HttpErrorResponse } from "@angular/common/http";
 
 @Injectable()
 
@@ -17,7 +21,8 @@ export class AdmissaoHandler {
 
   constructor(
     private validateBrService: ValidateBrService,
-    private admissaoService: AdmissaoService
+    private admissaoService: AdmissaoService,
+    private toastrService: ToastrService
   ) { }
 
   get loading() {
@@ -35,8 +40,8 @@ export class AdmissaoHandler {
       if (request?.length > 0) {
         this.admissoes.next(request);
       }
-    } catch (error) {
-      //
+    } catch (error: any) {
+      this.toastrService.error(error.statusText, 'Erro ao Buscar o CPF');
     } finally {
       this.loading.next(false);
     }

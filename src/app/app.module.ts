@@ -12,6 +12,9 @@ import { HeaderModule } from './core/header/header.module';
 import { SidemenuModule } from './core/sidemenu/sidemenu.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgxLoadingModule } from 'ngx-loading';
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -21,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    NgxLoadingModule.forRoot({}),
+    ToastrModule.forRoot(),
     NgbModule,
     FontAwesomeModule,
     HeaderModule,

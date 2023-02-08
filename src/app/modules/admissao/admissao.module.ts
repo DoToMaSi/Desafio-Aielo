@@ -10,11 +10,14 @@ import { DisplayComponentsModule } from 'src/app/shared/components/display/displ
 import { StepperModule } from 'src/app/shared/components/stepper/stepper.module';
 import { ValidateBrService } from 'ngx-validate-br';
 import { AdmissaoService } from './service/admissao.service';
+import { NgxLoadingModule } from 'ngx-loading';
+import { AdmissaoCardInfoComponent } from './components/admissao-card-info/admissao-card-info.component';
 
 @NgModule({
   declarations: [
     AdmissaoComponent,
-    BuscarCpfComponent
+    BuscarCpfComponent,
+    AdmissaoCardInfoComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +25,7 @@ import { AdmissaoService } from './service/admissao.service';
     DisplayComponentsModule,
     FormComponentsModule,
     StepperModule,
+    NgxLoadingModule,
     AdmissaoRoutingModule
   ],
   providers: [

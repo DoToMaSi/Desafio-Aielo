@@ -9,9 +9,16 @@ import { AdmissaoHandler } from '../handler/admissao.handler';
 
 export class BuscarCpfComponent {
 
-  constructor(@SkipSelf() public handler: AdmissaoHandler) { }
+  constructor(
+    @SkipSelf() public handler: AdmissaoHandler,
+  ) { }
+
+  get loading() {
+    return this.handler.loading.value
+  }
 
   searchCpf() {
+    this.handler.getOnboardings();
     // something
   }
 
